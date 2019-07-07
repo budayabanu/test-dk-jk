@@ -7,9 +7,8 @@ pipeline {
                 stage('AWS Login') {
                       steps {
                         script {
-                           sh 'eval $(aws ecr get-login --region  eu-west-1)'
+                            sh 'eval $(aws ecr get-login --no-include-email --region  eu-west-1)'
                         }
-
                       }
                 }
                 stage("Docker build and push to ECR") {

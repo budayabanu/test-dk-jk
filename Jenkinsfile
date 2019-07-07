@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     stages {
         stage ("Docker image build and push") {
             stages {

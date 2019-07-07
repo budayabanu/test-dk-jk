@@ -2,7 +2,6 @@ pipeline {
     agent none
     stages {
         stage ("Docker image build and push") {
-            agent none
             stages {
                 stage('AWS Login') {
                       steps {

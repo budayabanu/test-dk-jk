@@ -7,7 +7,7 @@ pipeline {
                 stage('AWS Login') {
                       steps {
                         script {
-                           sh("aws ecr get-login --region=eu-west-1")
+                           sh 'eval $(aws ecr get-login --region  eu-west-1)'
                         }
 
                       }
